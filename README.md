@@ -3,7 +3,7 @@ Extensions for AutoMapper and EF6
 
 This contains some useful extensions I've used with AutoMapper and EF6. Instead of this:
 
-```
+```csharp
 Mapper.CreateMap<Employee, EmployeeDto>()
   .ForMember(d => d.FullName, opt => opt.MapFrom(src => src.FirstName + " " + src.LastName));
 
@@ -12,7 +12,7 @@ var employees = await db.Employees.ProjectTo<EmployeeDto>().ToListAsync();
 
 You can do this instead:
 
-```
+```csharp
 public class Employee {
   [Computed]
   public string FullName { get { return FirstName + " " + LastName; } }
