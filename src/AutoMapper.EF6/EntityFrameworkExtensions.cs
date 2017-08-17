@@ -12,104 +12,104 @@
 
     public static class EntityFrameworkExtensions
     {
-        public static async Task<List<TDestination>> ProjectToListAsync<TDestination>(this IQueryable queryable, IConfigurationProvider config)
+        public static Task<List<TDestination>> ProjectToListAsync<TDestination>(this IQueryable queryable, IConfigurationProvider config)
         {
-            return await queryable.ProjectTo<TDestination>(config).DecompileAsync().ToListAsync();
+            return queryable.ProjectTo<TDestination>(config).DecompileAsync().ToListAsync();
         }
 
-        public static async Task<List<TDestination>> ProjectToListAsync<TDestination>(this IQueryable queryable)
+        public static Task<List<TDestination>> ProjectToListAsync<TDestination>(this IQueryable queryable)
         {
-            return await queryable.ProjectTo<TDestination>().DecompileAsync().ToListAsync();
+            return queryable.ProjectTo<TDestination>().DecompileAsync().ToListAsync();
         }
 
-        public static async Task<TDestination[]> ProjectToArrayAsync<TDestination>(this IQueryable queryable, IConfigurationProvider config)
+        public static Task<TDestination[]> ProjectToArrayAsync<TDestination>(this IQueryable queryable, IConfigurationProvider config)
         {
-            return await queryable.ProjectTo<TDestination>(config).DecompileAsync().ToArrayAsync();
+            return queryable.ProjectTo<TDestination>(config).DecompileAsync().ToArrayAsync();
         }
 
-        public static async Task<TDestination[]> ProjectToArrayAsync<TDestination>(this IQueryable queryable)
+        public static Task<TDestination[]> ProjectToArrayAsync<TDestination>(this IQueryable queryable)
         {
-            return await queryable.ProjectTo<TDestination>().DecompileAsync().ToArrayAsync();
+            return queryable.ProjectTo<TDestination>().DecompileAsync().ToArrayAsync();
         }
 
-        public static async Task<TDestination> ProjectToSingleOrDefaultAsync<TDestination>(this IQueryable queryable, IConfigurationProvider config)
+        public static Task<TDestination> ProjectToSingleOrDefaultAsync<TDestination>(this IQueryable queryable, IConfigurationProvider config)
         {
-            return await queryable.ProjectTo<TDestination>(config).DecompileAsync().SingleOrDefaultAsync();
+            return queryable.ProjectTo<TDestination>(config).DecompileAsync().SingleOrDefaultAsync();
         }
 
-        public static async Task<TDestination> ProjectToSingleOrDefaultAsync<TSource, TDestination>(this IQueryable<TSource> queryable, Expression<Func<TSource, bool>> predicate, IConfigurationProvider config)
+        public static Task<TDestination> ProjectToSingleOrDefaultAsync<TSource, TDestination>(this IQueryable<TSource> queryable, Expression<Func<TSource, bool>> predicate, IConfigurationProvider config)
         {
-            return await queryable.Where(predicate).ProjectTo<TDestination>(config).DecompileAsync().SingleOrDefaultAsync();
+            return queryable.Where(predicate).ProjectTo<TDestination>(config).DecompileAsync().SingleOrDefaultAsync();
         }
 
-        public static async Task<TDestination> ProjectToSingleOrDefaultAsync<TDestination>(this IQueryable queryable)
+        public static Task<TDestination> ProjectToSingleOrDefaultAsync<TDestination>(this IQueryable queryable)
         {
-            return await queryable.ProjectTo<TDestination>().DecompileAsync().SingleOrDefaultAsync();
+            return queryable.ProjectTo<TDestination>().DecompileAsync().SingleOrDefaultAsync();
         }
 
-        public static async Task<TDestination> ProjectToSingleOrDefaultAsync<TSource, TDestination>(this IQueryable<TSource> queryable, Expression<Func<TSource, bool>> predicate)
+        public static Task<TDestination> ProjectToSingleOrDefaultAsync<TSource, TDestination>(this IQueryable<TSource> queryable, Expression<Func<TSource, bool>> predicate)
         {
-            return await queryable.Where(predicate).ProjectTo<TDestination>().DecompileAsync().SingleOrDefaultAsync();
+            return queryable.Where(predicate).ProjectTo<TDestination>().DecompileAsync().SingleOrDefaultAsync();
         }
 
-        public static async Task<TDestination> ProjectToSingleAsync<TDestination>(this IQueryable queryable, IConfigurationProvider config)
+        public static Task<TDestination> ProjectToSingleAsync<TDestination>(this IQueryable queryable, IConfigurationProvider config)
         {
-            return await queryable.ProjectTo<TDestination>(config).DecompileAsync().SingleAsync();
+            return queryable.ProjectTo<TDestination>(config).DecompileAsync().SingleAsync();
         }
 
-        public static async Task<TDestination> ProjectToSingleAsync<TSource, TDestination>(this IQueryable<TSource> queryable, Expression<Func<TSource, bool>> predicate, IConfigurationProvider config)
+        public static Task<TDestination> ProjectToSingleAsync<TSource, TDestination>(this IQueryable<TSource> queryable, Expression<Func<TSource, bool>> predicate, IConfigurationProvider config)
         {
-            return await queryable.Where(predicate).ProjectTo<TDestination>(config).DecompileAsync().SingleAsync();
+            return queryable.Where(predicate).ProjectTo<TDestination>(config).DecompileAsync().SingleAsync();
         }
 
-        public static async Task<TDestination> ProjectToSingleAsync<TDestination>(this IQueryable queryable)
+        public static Task<TDestination> ProjectToSingleAsync<TDestination>(this IQueryable queryable)
         {
-            return await queryable.ProjectTo<TDestination>().DecompileAsync().SingleAsync();
+            return queryable.ProjectTo<TDestination>().DecompileAsync().SingleAsync();
         }
 
-        public static async Task<TDestination> ProjectToSingleAsync<TSource, TDestination>(this IQueryable<TSource> queryable, Expression<Func<TSource, bool>> predicate)
+        public static Task<TDestination> ProjectToSingleAsync<TSource, TDestination>(this IQueryable<TSource> queryable, Expression<Func<TSource, bool>> predicate)
         {
-            return await queryable.Where(predicate).ProjectTo<TDestination>().DecompileAsync().SingleAsync();
+            return queryable.Where(predicate).ProjectTo<TDestination>().DecompileAsync().SingleAsync();
         }
 
-        public static async Task<TDestination> ProjectToFirstOrDefaultAsync<TDestination>(this IQueryable queryable, IConfigurationProvider config)
+        public static Task<TDestination> ProjectToFirstOrDefaultAsync<TDestination>(this IQueryable queryable, IConfigurationProvider config)
         {
-            return await queryable.ProjectTo<TDestination>(config).DecompileAsync().FirstOrDefaultAsync();
+            return queryable.ProjectTo<TDestination>(config).DecompileAsync().FirstOrDefaultAsync();
         }
 
-        public static async Task<TDestination> ProjectToFirstOrDefaultAsync<TSource, TDestination>(this IQueryable<TSource> queryable, Expression<Func<TSource, bool>> predicate, IConfigurationProvider config)
+        public static Task<TDestination> ProjectToFirstOrDefaultAsync<TSource, TDestination>(this IQueryable<TSource> queryable, Expression<Func<TSource, bool>> predicate, IConfigurationProvider config)
         {
-            return await queryable.Where(predicate).ProjectTo<TDestination>(config).DecompileAsync().FirstOrDefaultAsync();
+            return queryable.Where(predicate).ProjectTo<TDestination>(config).DecompileAsync().FirstOrDefaultAsync();
         }
 
-        public static async Task<TDestination> ProjectToFirstOrDefaultAsync<TDestination>(this IQueryable queryable)
+        public static Task<TDestination> ProjectToFirstOrDefaultAsync<TDestination>(this IQueryable queryable)
         {
-            return await queryable.ProjectTo<TDestination>().DecompileAsync().FirstOrDefaultAsync();
+            return queryable.ProjectTo<TDestination>().DecompileAsync().FirstOrDefaultAsync();
         }
 
-        public static async Task<TDestination> ProjectToFirstOrDefaultAsync<TSource, TDestination>(this IQueryable<TSource> queryable, Expression<Func<TSource, bool>> predicate)
+        public static Task<TDestination> ProjectToFirstOrDefaultAsync<TSource, TDestination>(this IQueryable<TSource> queryable, Expression<Func<TSource, bool>> predicate)
         {
-            return await queryable.Where(predicate).ProjectTo<TDestination>().DecompileAsync().FirstOrDefaultAsync();
+            return queryable.Where(predicate).ProjectTo<TDestination>().DecompileAsync().FirstOrDefaultAsync();
         }
 
-        public static async Task<TDestination> ProjectToFirstAsync<TDestination>(this IQueryable queryable, IConfigurationProvider config)
+        public static Task<TDestination> ProjectToFirstAsync<TDestination>(this IQueryable queryable, IConfigurationProvider config)
         {
-            return await queryable.ProjectTo<TDestination>(config).DecompileAsync().FirstAsync();
+            return queryable.ProjectTo<TDestination>(config).DecompileAsync().FirstAsync();
         }
 
-        public static async Task<TDestination> ProjectToFirstAsync<TSource, TDestination>(this IQueryable<TSource> queryable, Expression<Func<TSource, bool>> predicate, IConfigurationProvider config)
+        public static Task<TDestination> ProjectToFirstAsync<TSource, TDestination>(this IQueryable<TSource> queryable, Expression<Func<TSource, bool>> predicate, IConfigurationProvider config)
         {
-            return await queryable.Where(predicate).ProjectTo<TDestination>(config).DecompileAsync().FirstAsync();
+            return queryable.Where(predicate).ProjectTo<TDestination>(config).DecompileAsync().FirstAsync();
         }
 
-        public static async Task<TDestination> ProjectToFirstAsync<TDestination>(this IQueryable queryable)
+        public static Task<TDestination> ProjectToFirstAsync<TDestination>(this IQueryable queryable)
         {
-            return await queryable.ProjectTo<TDestination>().DecompileAsync().FirstAsync();
+            return queryable.ProjectTo<TDestination>().DecompileAsync().FirstAsync();
         }
 
-        public static async Task<TDestination> ProjectToFirstAsync<TSource, TDestination>(this IQueryable<TSource> queryable, Expression<Func<TSource, bool>> predicate)
+        public static Task<TDestination> ProjectToFirstAsync<TSource, TDestination>(this IQueryable<TSource> queryable, Expression<Func<TSource, bool>> predicate)
         {
-            return await queryable.Where(predicate).ProjectTo<TDestination>().DecompileAsync().FirstAsync();
+            return queryable.Where(predicate).ProjectTo<TDestination>().DecompileAsync().FirstAsync();
         }
 
         public static List<TDestination> ProjectToList<TDestination>(this IQueryable queryable, IConfigurationProvider config)
