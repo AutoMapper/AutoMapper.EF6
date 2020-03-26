@@ -1,6 +1,8 @@
 # AutoMapper.EF6
 Extensions for AutoMapper and EF6
 
+[![NuGet](http://img.shields.io/nuget/v/AutoMapper.EF6.svg)](https://www.nuget.org/packages/AutoMapper.EF6/)
+
 This contains some useful extensions I've used with AutoMapper and EF6. Instead of this:
 
 ```csharp
