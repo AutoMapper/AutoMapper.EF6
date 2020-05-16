@@ -432,4 +432,13 @@
             return queryable.ProjectTo<TDestination>(parameters).Decompile();
         }
     }
+#if !NETFRAMEWORK
+  internal static class InternalQueryableExtensions
+  {
+    internal static IQueryable<TDestination> Decompile<TDestination>(this IQueryable<TDestination> queryable)
+    {
+      return queryable.DecompileAsync();
+    }
+  }
+#endif 
 }
