@@ -13,20 +13,8 @@
     <PackageLicenseUrl>https://github.com/AutoMapper/AutoMapper.EF6/blob/master/LICENSE</PackageLicenseUrl>
   </PropertyGroup>
 
-  <Choose>
-    <When Condition=" '$(TargetFramework)' == 'net461' ">
-      <ItemGroup>
-        <PackageReference Include="EntityFramework" Version="6.2.0" />
-      </ItemGroup>
-    </When>
-    <Otherwise>
-      <ItemGroup>
-        <PackageReference Include="EntityFramework" Version="6.4.4" />
-      </ItemGroup>
-    </Otherwise>
-  </Choose>
-
   <ItemGroup>
+    <PackageReference Include="EntityFramework" Version="6.4.4" />
     <PackageReference Include="DelegateDecompiler.EntityFramework" Version="0.24.0" />
     <PackageReference Include="AutoMapper" Version="8.0.0" />
   </ItemGroup>
