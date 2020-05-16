@@ -4,7 +4,7 @@
     <Description>Extensions to make AutoMapper easier to work with Entity Framework. Project to collections and items, decompiling calculated properties along the way</Description>
     <VersionPrefix>2.0.0</VersionPrefix>
     <Authors>Jimmy Bogard</Authors>
-    <TargetFrameworks>netcoreapp3.1;net461;netstandard2.1</TargetFrameworks>
+    <TargetFrameworks>net461;netstandard2.1</TargetFrameworks>
     <AssemblyName>AutoMapper.EF6</AssemblyName>
     <PackageId>AutoMapper.EF6</PackageId>
     <PackageTags>EntityFramework;AutoMapper</PackageTags>
@@ -21,7 +21,7 @@
     </When>
     <Otherwise>
       <ItemGroup>
-        <PackageReference Include="EntityFramework" Version="6.4.0" />
+        <PackageReference Include="EntityFramework" Version="6.4.4" />
       </ItemGroup>
     </Otherwise>
   </Choose>
