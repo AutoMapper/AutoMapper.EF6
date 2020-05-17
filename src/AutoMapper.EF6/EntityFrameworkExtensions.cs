@@ -214,231 +214,222 @@
 
         public static List<TDestination> ProjectToList<TDestination>(this IQueryable queryable, IConfigurationProvider config)
         {
-            return queryable.ProjectTo<TDestination>(config).Decompile().ToList();
+            return queryable.ProjectTo<TDestination>(config).DecompileAsync().ToList();
         }
 
         public static List<TDestination> ProjectToList<TDestination>(this IQueryable queryable)
         {
-            return queryable.ProjectTo<TDestination>().Decompile().ToList();
+            return queryable.ProjectTo<TDestination>().DecompileAsync().ToList();
         }
 
         public static List<TDestination> ProjectToList<TDestination>(this IQueryable queryable, IConfigurationProvider config, object parameters)
         {
-            return queryable.ProjectTo<TDestination>(config, parameters).Decompile().ToList();
+            return queryable.ProjectTo<TDestination>(config, parameters).DecompileAsync().ToList();
         }
 
         public static List<TDestination> ProjectToList<TDestination>(this IQueryable queryable, object parameters)
         {
-            return queryable.ProjectTo<TDestination>(parameters).Decompile().ToList();
+            return queryable.ProjectTo<TDestination>(parameters).DecompileAsync().ToList();
         }
 
         public static TDestination[] ProjectToArray<TDestination>(this IQueryable queryable, IConfigurationProvider config)
         {
-            return queryable.ProjectTo<TDestination>(config).Decompile().ToArray();
+            return queryable.ProjectTo<TDestination>(config).DecompileAsync().ToArray();
         }
 
         public static TDestination[] ProjectToArray<TDestination>(this IQueryable queryable)
         {
-            return queryable.ProjectTo<TDestination>().Decompile().ToArray();
+            return queryable.ProjectTo<TDestination>().DecompileAsync().ToArray();
         }
 
         public static TDestination[] ProjectToArray<TDestination>(this IQueryable queryable, IConfigurationProvider config, object parameters)
         {
-            return queryable.ProjectTo<TDestination>(config, parameters).Decompile().ToArray();
+            return queryable.ProjectTo<TDestination>(config, parameters).DecompileAsync().ToArray();
         }
 
         public static TDestination[] ProjectToArray<TDestination>(this IQueryable queryable, object parameters)
         {
-            return queryable.ProjectTo<TDestination>(parameters).Decompile().ToArray();
+            return queryable.ProjectTo<TDestination>(parameters).DecompileAsync().ToArray();
         }
 
         public static TDestination ProjectToSingleOrDefault<TDestination>(this IQueryable queryable, IConfigurationProvider config)
         {
-            return queryable.ProjectTo<TDestination>(config).Decompile().SingleOrDefault();
+            return queryable.ProjectTo<TDestination>(config).DecompileAsync().SingleOrDefault();
         }
 
         public static TDestination ProjectToSingleOrDefault<TSource, TDestination>(this IQueryable<TSource> queryable, Expression<Func<TSource, bool>> predicate, IConfigurationProvider config)
         {
-            return queryable.Where(predicate).ProjectTo<TDestination>(config).Decompile().SingleOrDefault();
+            return queryable.Where(predicate).ProjectTo<TDestination>(config).DecompileAsync().SingleOrDefault();
         }
 
         public static TDestination ProjectToSingleOrDefault<TDestination>(this IQueryable queryable)
         {
-            return queryable.ProjectTo<TDestination>().Decompile().SingleOrDefault();
+            return queryable.ProjectTo<TDestination>().DecompileAsync().SingleOrDefault();
         }
 
         public static TDestination ProjectToSingleOrDefault<TSource, TDestination>(this IQueryable<TSource> queryable, Expression<Func<TSource, bool>> predicate)
         {
-            return queryable.Where(predicate).ProjectTo<TDestination>().Decompile().SingleOrDefault();
+            return queryable.Where(predicate).ProjectTo<TDestination>().DecompileAsync().SingleOrDefault();
         }
 
         public static TDestination ProjectToSingleOrDefault<TDestination>(this IQueryable queryable, IConfigurationProvider config, object parameters)
         {
-            return queryable.ProjectTo<TDestination>(config, parameters).Decompile().SingleOrDefault();
+            return queryable.ProjectTo<TDestination>(config, parameters).DecompileAsync().SingleOrDefault();
         }
 
         public static TDestination ProjectToSingleOrDefault<TSource, TDestination>(this IQueryable<TSource> queryable, Expression<Func<TSource, bool>> predicate, IConfigurationProvider config, object parameters)
         {
-            return queryable.Where(predicate).ProjectTo<TDestination>(config, parameters).Decompile().SingleOrDefault();
+            return queryable.Where(predicate).ProjectTo<TDestination>(config, parameters).DecompileAsync().SingleOrDefault();
         }
 
         public static TDestination ProjectToSingleOrDefault<TDestination>(this IQueryable queryable, object parameters)
         {
-            return queryable.ProjectTo<TDestination>(parameters).Decompile().SingleOrDefault();
+            return queryable.ProjectTo<TDestination>(parameters).DecompileAsync().SingleOrDefault();
         }
 
         public static TDestination ProjectToSingleOrDefault<TSource, TDestination>(this IQueryable<TSource> queryable, Expression<Func<TSource, bool>> predicate, object parameters)
         {
-            return queryable.Where(predicate).ProjectTo<TDestination>(parameters).Decompile().SingleOrDefault();
+            return queryable.Where(predicate).ProjectTo<TDestination>(parameters).DecompileAsync().SingleOrDefault();
         }
 
         public static TDestination ProjectToSingle<TDestination>(this IQueryable queryable, IConfigurationProvider config)
         {
-            return queryable.ProjectTo<TDestination>(config).Decompile().Single();
+            return queryable.ProjectTo<TDestination>(config).DecompileAsync().Single();
         }
 
         public static TDestination ProjectToSingle<TSource, TDestination>(this IQueryable<TSource> queryable, Expression<Func<TSource, bool>> predicate, IConfigurationProvider config)
         {
-            return queryable.Where(predicate).ProjectTo<TDestination>(config).Decompile().Single();
+            return queryable.Where(predicate).ProjectTo<TDestination>(config).DecompileAsync().Single();
         }
 
         public static TDestination ProjectToSingle<TDestination>(this IQueryable queryable)
         {
-            return queryable.ProjectTo<TDestination>().Decompile().Single();
+            return queryable.ProjectTo<TDestination>().DecompileAsync().Single();
         }
 
         public static TDestination ProjectToSingle<TSource, TDestination>(this IQueryable<TSource> queryable, Expression<Func<TSource, bool>> predicate)
         {
-            return queryable.Where(predicate).ProjectTo<TDestination>().Decompile().Single();
+            return queryable.Where(predicate).ProjectTo<TDestination>().DecompileAsync().Single();
         }
 
         public static TDestination ProjectToSingle<TDestination>(this IQueryable queryable, IConfigurationProvider config, object parameters)
         {
-            return queryable.ProjectTo<TDestination>(config, parameters).Decompile().Single();
+            return queryable.ProjectTo<TDestination>(config, parameters).DecompileAsync().Single();
         }
 
         public static TDestination ProjectToSingle<TSource, TDestination>(this IQueryable<TSource> queryable, Expression<Func<TSource, bool>> predicate, IConfigurationProvider config, object parameters)
         {
-            return queryable.Where(predicate).ProjectTo<TDestination>(config, parameters).Decompile().Single();
+            return queryable.Where(predicate).ProjectTo<TDestination>(config, parameters).DecompileAsync().Single();
         }
 
         public static TDestination ProjectToSingle<TDestination>(this IQueryable queryable, object parameters)
         {
-            return queryable.ProjectTo<TDestination>(parameters).Decompile().Single();
+            return queryable.ProjectTo<TDestination>(parameters).DecompileAsync().Single();
         }
 
         public static TDestination ProjectToSingle<TSource, TDestination>(this IQueryable<TSource> queryable, Expression<Func<TSource, bool>> predicate, object parameters)
         {
-            return queryable.Where(predicate).ProjectTo<TDestination>(parameters).Decompile().Single();
+            return queryable.Where(predicate).ProjectTo<TDestination>(parameters).DecompileAsync().Single();
         }
 
         public static TDestination ProjectToFirstOrDefault<TDestination>(this IQueryable queryable, IConfigurationProvider config)
         {
-            return queryable.ProjectTo<TDestination>(config).Decompile().FirstOrDefault();
+            return queryable.ProjectTo<TDestination>(config).DecompileAsync().FirstOrDefault();
         }
 
         public static TDestination ProjectToFirstOrDefault<TSource, TDestination>(this IQueryable<TSource> queryable, Expression<Func<TSource, bool>> predicate, IConfigurationProvider config)
         {
-            return queryable.Where(predicate).ProjectTo<TDestination>(config).Decompile().FirstOrDefault();
+            return queryable.Where(predicate).ProjectTo<TDestination>(config).DecompileAsync().FirstOrDefault();
         }
 
         public static TDestination ProjectToFirstOrDefault<TDestination>(this IQueryable queryable)
         {
-            return queryable.ProjectTo<TDestination>().Decompile().FirstOrDefault();
+            return queryable.ProjectTo<TDestination>().DecompileAsync().FirstOrDefault();
         }
 
         public static TDestination ProjectToFirstOrDefault<TSource, TDestination>(this IQueryable<TSource> queryable, Expression<Func<TSource, bool>> predicate)
         {
-            return queryable.Where(predicate).ProjectTo<TDestination>().Decompile().FirstOrDefault();
+            return queryable.Where(predicate).ProjectTo<TDestination>().DecompileAsync().FirstOrDefault();
         }
 
         public static TDestination ProjectToFirstOrDefault<TDestination>(this IQueryable queryable, IConfigurationProvider config, object parameters)
         {
-            return queryable.ProjectTo<TDestination>(config, parameters).Decompile().FirstOrDefault();
+            return queryable.ProjectTo<TDestination>(config, parameters).DecompileAsync().FirstOrDefault();
         }
 
         public static TDestination ProjectToFirstOrDefault<TSource, TDestination>(this IQueryable<TSource> queryable, Expression<Func<TSource, bool>> predicate, IConfigurationProvider config, object parameters)
         {
-            return queryable.Where(predicate).ProjectTo<TDestination>(config, parameters).Decompile().FirstOrDefault();
+            return queryable.Where(predicate).ProjectTo<TDestination>(config, parameters).DecompileAsync().FirstOrDefault();
         }
 
         public static TDestination ProjectToFirstOrDefault<TDestination>(this IQueryable queryable, object parameters)
         {
-            return queryable.ProjectTo<TDestination>(parameters).Decompile().FirstOrDefault();
+            return queryable.ProjectTo<TDestination>(parameters).DecompileAsync().FirstOrDefault();
         }
 
         public static TDestination ProjectToFirstOrDefault<TSource, TDestination>(this IQueryable<TSource> queryable, Expression<Func<TSource, bool>> predicate, object parameters)
         {
-            return queryable.Where(predicate).ProjectTo<TDestination>(parameters).Decompile().FirstOrDefault();
+            return queryable.Where(predicate).ProjectTo<TDestination>(parameters).DecompileAsync().FirstOrDefault();
         }
 
         public static TDestination ProjectToFirst<TDestination>(this IQueryable queryable, IConfigurationProvider config)
         {
-            return queryable.ProjectTo<TDestination>(config).Decompile().First();
+            return queryable.ProjectTo<TDestination>(config).DecompileAsync().First();
         }
 
         public static TDestination ProjectToFirst<TSource, TDestination>(this IQueryable<TSource> queryable, Expression<Func<TSource, bool>> predicate, IConfigurationProvider config)
         {
-            return queryable.Where(predicate).ProjectTo<TDestination>(config).Decompile().First();
+            return queryable.Where(predicate).ProjectTo<TDestination>(config).DecompileAsync().First();
         }
 
         public static TDestination ProjectToFirst<TDestination>(this IQueryable queryable)
         {
-            return queryable.ProjectTo<TDestination>().Decompile().First();
+            return queryable.ProjectTo<TDestination>().DecompileAsync().First();
         }
 
         public static TDestination ProjectToFirst<TSource, TDestination>(this IQueryable<TSource> queryable, Expression<Func<TSource, bool>> predicate)
         {
-            return queryable.Where(predicate).ProjectTo<TDestination>().Decompile().First();
+            return queryable.Where(predicate).ProjectTo<TDestination>().DecompileAsync().First();
         }
 
         public static TDestination ProjectToFirst<TDestination>(this IQueryable queryable, IConfigurationProvider config, object parameters)
         {
-            return queryable.ProjectTo<TDestination>(config, parameters).Decompile().First();
+            return queryable.ProjectTo<TDestination>(config, parameters).DecompileAsync().First();
         }
 
         public static TDestination ProjectToFirst<TSource, TDestination>(this IQueryable<TSource> queryable, Expression<Func<TSource, bool>> predicate, IConfigurationProvider config, object parameters)
         {
-            return queryable.Where(predicate).ProjectTo<TDestination>(config, parameters).Decompile().First();
+            return queryable.Where(predicate).ProjectTo<TDestination>(config, parameters).DecompileAsync().First();
         }
 
         public static TDestination ProjectToFirst<TDestination>(this IQueryable queryable, object parameters)
         {
-            return queryable.ProjectTo<TDestination>(parameters).Decompile().First();
+            return queryable.ProjectTo<TDestination>(parameters).DecompileAsync().First();
         }
 
         public static TDestination ProjectToFirst<TSource, TDestination>(this IQueryable<TSource> queryable, Expression<Func<TSource, bool>> predicate, object parameters)
         {
-            return queryable.Where(predicate).ProjectTo<TDestination>(parameters).Decompile().First();
+            return queryable.Where(predicate).ProjectTo<TDestination>(parameters).DecompileAsync().First();
         }
 
         public static IQueryable<TDestination> ProjectToQueryable<TDestination>(this IQueryable queryable, IConfigurationProvider config)
         {
-            return queryable.ProjectTo<TDestination>(config).Decompile();
+            return queryable.ProjectTo<TDestination>(config).DecompileAsync();
         }
 
         public static IQueryable<TDestination> ProjectToQueryable<TDestination>(this IQueryable queryable)
         {
-            return queryable.ProjectTo<TDestination>().Decompile();
+            return queryable.ProjectTo<TDestination>().DecompileAsync();
         }
 
         public static IQueryable<TDestination> ProjectToQueryable<TDestination>(this IQueryable queryable, IConfigurationProvider config, object parameters)
         {
-            return queryable.ProjectTo<TDestination>(config, parameters).Decompile();
+            return queryable.ProjectTo<TDestination>(config, parameters).DecompileAsync();
         }
 
         public static IQueryable<TDestination> ProjectToQueryable<TDestination>(this IQueryable queryable, object parameters)
         {
-            return queryable.ProjectTo<TDestination>(parameters).Decompile();
+            return queryable.ProjectTo<TDestination>(parameters).DecompileAsync();
         }
     }
-#if !NETFRAMEWORK
-  internal static class InternalQueryableExtensions
-  {
-    internal static IQueryable<TDestination> Decompile<TDestination>(this IQueryable<TDestination> queryable)
-    {
-      return queryable.DecompileAsync();
-    }
-  }
-#endif 
 }

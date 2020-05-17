@@ -15,7 +15,7 @@
 
   <ItemGroup>
     <PackageReference Include="EntityFramework" Version="6.4.4" />
-    <PackageReference Include="DelegateDecompiler.EntityFramework" Version="0.24.0" />
+    <PackageReference Include="DelegateDecompiler.EntityFramework" Version="0.28.0" />
     <PackageReference Include="AutoMapper" Version="8.0.0" />
   </ItemGroup>
 
