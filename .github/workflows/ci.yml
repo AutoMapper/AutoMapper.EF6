@@ -18,7 +18,7 @@ jobs:
 
     - name: Set Variables
       run: |
-        echo "DEPLOY_PACKAGE_URL=${{ secrets.MYGET_CI_NURL }}" | Out-File -FilePath $Env:GITHUB_ENV -Encoding utf-8 -Append
+        echo "DEPLOY_PACKAGE_URL=https://www.myget.org/F/automapperdev/api/v3/index.json" | Out-File -FilePath $Env:GITHUB_ENV -Encoding utf-8 -Append
         echo "DEPLOY_PACKAGE_API_KEY=${{ secrets.MYGET_CI_API_KEY }}" | Out-File -FilePath $Env:GITHUB_ENV -Encoding utf-8 -Append
         echo "REPO=${{ github.repository }}" | Out-File -FilePath $Env:GITHUB_ENV -Encoding utf-8 -Append
         echo "REPO_OWNER=${{ github.repository_owner }}" | Out-File -FilePath $Env:GITHUB_ENV -Encoding utf-8 -Append
