@@ -3,7 +3,7 @@ $scriptName = $MyInvocation.MyCommand.Name
 Write-Host "Owner ${Env:REPO_OWNER}"
 Write-Host "Repository ${Env:REPO}"
 
-$PROJECT_PATH = ".\$($Env:PROJECT_NAME)\$($Env:PROJECT_NAME).csproj"
+$PROJECT_PATH = ".\src\$($Env:PROJECT_NAME)\$($Env:PROJECT_NAME).csproj"
 $NUGET_PACKAGE_PATH = ".\artifacts\$($Env:PROJECT_NAME).*.nupkg"
 
 Write-Host "Project Path ${PROJECT_PATH}"
