@@ -2,7 +2,6 @@
 
   <PropertyGroup>
     <Description>Extensions to make AutoMapper easier to work with Entity Framework. Project to collections and items, decompiling calculated properties along the way</Description>
-    <VersionPrefix>2.1.0</VersionPrefix>
     <Authors>Jimmy Bogard</Authors>
     <TargetFrameworks>net461;netstandard2.1</TargetFrameworks>
     <AssemblyName>AutoMapper.EF6</AssemblyName>
