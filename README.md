@@ -2,6 +2,7 @@
 Extensions for AutoMapper and EF6
 
 [![NuGet](http://img.shields.io/nuget/v/AutoMapper.EF6.svg)](https://www.nuget.org/packages/AutoMapper.EF6/)
+[![MyGet](https://img.shields.io/badge/MyGet-AutoMapper.EF6-brightgreen)](https://myget.org/feed/automapperdev/package/nuget/AutoMapper.EF6)
 
 This contains some useful extensions I've used with AutoMapper and EF6. Instead of this:
 
