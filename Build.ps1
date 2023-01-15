@@ -28,4 +28,4 @@ if(Test-Path $artifacts) { Remove-Item $artifacts -Force -Recurse }
 
 exec { & dotnet test -c Release -r $artifacts -l trx --verbosity=normal }
 
-exec { & dotnet pack .\src\AutoMapper.EF6\AutoMapper.EF6.csproj -c Release -o $artifacts --no-build }
+exec { & dotnet pack .\src\AutoMapper.EF6 -c Release -o $artifacts --no-build }
