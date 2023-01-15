@@ -22,6 +22,10 @@ function Exec
     }
 }
 
-exec { & dotnet test -c Release -l trx --verbosity=normal }
+$artifacts = ".\artifacts"
 
-exec { & dotnet pack .\src\AutoMapper.EF6\AutoMapper.EF6.csproj -c Release --no-build }
+if(Test-Path $artifacts) { Remove-Item $artifacts -Force -Recurse }
+
+exec { & dotnet test -c Release -r $artifacts -l trx --verbosity=normal }
+
+exec { & dotnet pack .\src\AutoMapper.EF6\AutoMapper.EF6.csproj -c Release -o $artifacts --no-build }
