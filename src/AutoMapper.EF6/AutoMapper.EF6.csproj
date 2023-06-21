@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Description>Extensions to make AutoMapper easier to work with Entity Framework. Project to collections and items, decompiling calculated properties along the way</Description>
     <Authors>Jimmy Bogard</Authors>
-    <TargetFrameworks>net461;netstandard2.1</TargetFrameworks>
+    <TargetFrameworks>net462;netstandard2.1</TargetFrameworks>
     <AssemblyName>AutoMapper.EF6</AssemblyName>
     <PackageId>AutoMapper.EF6</PackageId>
     <PackageTags>EntityFramework;AutoMapper</PackageTags>
@@ -16,8 +16,8 @@
   <ItemGroup>
     <PackageReference Include="MinVer" Version="2.3.1" PrivateAssets="All" />
     <PackageReference Include="EntityFramework" Version="6.4.4" />
-    <PackageReference Include="DelegateDecompiler.EntityFramework" Version="0.28.0" />
-    <PackageReference Include="AutoMapper" Version="8.0.0" />
+    <PackageReference Include="DelegateDecompiler.EntityFramework" Version="0.32.0" />
+    <PackageReference Include="AutoMapper" Version="10.1.1" />
   </ItemGroup>
 
   <ItemGroup Condition=" '$(TargetFramework)' == 'net461' ">
